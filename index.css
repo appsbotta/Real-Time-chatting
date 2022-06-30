@@ -1,0 +1,24 @@
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: lightcyan;
+    background-image: image();
+    text-align: center;
+    font-family: 'Macondo', cursive;
+    font-size: 25px;
+}
+.input{
+    margin-top: 20px;
+    border-style:groove;
+    display: inline-block;
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+}
+.one{
+    margin: 25px;
+}
+#sub{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 30px;
+}

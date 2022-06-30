@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="chat.css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons.flaticon.com/png/512/4618/premium/4618786.png?token=exp=1653219968~hmac=1143623be45286c2185c798daf9161f8"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&family=Merriweather+Sans&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      var name = prompt('Enter ur name');
+    </script>
+  </head>
+  <body>
+    <div><h1 class="head">Chat Room</h1></div>
+    <div>
+      <ul id="messages"></ul>
+    </div>
+    <form action="">
+      <input
+      ty
+        id="m"
+        placeholder="Enter your message..."
+        autocomplete="off"
+        required
+      /><button class="btn">Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var socket = io();
+      socket.emit("joining msg", name);
+
+      $("form").submit(function (e) {
+        e.preventDefault();
+        socket.emit("chat message", name + ":  " + $("#m").val());
+        $("#messages").append(
+          $('<li id="list">').text("You:  " + $("#m").val())
+        );
+        $("#m").val("");
+        return false;
+      });
+      socket.on("chat message", function (msg) {
+        $("#messages").append($("<li>").text(msg));
+      });
+    </script>
+  </body>
+</html>

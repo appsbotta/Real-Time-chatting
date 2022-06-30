@@ -1,0 +1,56 @@
+body{
+    
+    background-color: lightcyan;
+}
+.head{
+    text-align: center;
+}
+form { 
+    background: #000000; 
+    padding: 3px; 
+    position: fixed; 
+    bottom: 5px; 
+    width: 100%; 
+}
+
+form input { 
+    background-color: #e6ffe6;
+    border: 0; 
+    padding: 10px; 
+    width: 90%; 
+    margin-right: 0.5%; 
+}
+
+form button { 
+    width: 9%; 
+    background: #00e600;
+    display: inline-block;
+    border: none; 
+    padding: 5px; 
+    font-size: 20px; 
+}
+
+#messages { 
+    
+    margin: 0; 
+    padding: 0; 
+    
+}
+
+#messages li { 
+    padding: 5px 10px; 
+}
+
+#messages li:nth-child(odd) { 
+    background: #b3ffb3; 
+}
+
+
+#list{
+   text-align: right;
+}
+.btn{
+    position: absolute;
+    right: 0px;
+    width: 107px;
+}

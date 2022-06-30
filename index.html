@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="title">Chatting</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/4618/premium/4618786.png?token=exp=1653219968~hmac=1143623be45286c2185c798daf9161f8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&family=Merriweather+Sans&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1 class="heading">Real time chatting</h1>
+      <img class="img" src="chatting-application.svg" width="300px" alt="bg" />
+      <div>
+        <form id="input" action="" method="get">
+          <input id="sub" type="button" value="Join Chat Room" onclick=""/>
+        </form>
+      </div>
+      <img src="https://cdn2.iconfinder.com/data/icons/smile-glyph-silhouettes/300/11932537Untitled-3-512.png" alt="emoji">
+    </div>
+<script>var NAME = document.getElementById('one')</script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#sub").click(function(){
+          window.location.href = (`http://localhost:5000/chat.html?${NAME}`);
+        });
+        localStorage['lol'] = name;
+    </script>
+  </body>
+</html>
